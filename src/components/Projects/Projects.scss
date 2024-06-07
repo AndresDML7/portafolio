@@ -1,0 +1,65 @@
+@import '../../assets/styles/base/variables';
+
+.projects {
+    padding: 4rem 2rem;
+    background-color: $color-highlight;
+    min-height: 90vh;
+
+    &__container {
+        max-width: 1200px;
+        margin: 10rem auto;
+        text-align: center;
+    }
+
+    &__title {
+        color: $color-primary;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    &__item {
+        background-color: $color-primary;
+        color: $color-text;
+        padding: 1.5rem;
+        border-radius: 10px;
+        width: calc(33.333% - 2rem);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+
+    &__item-title {
+        color: $color-highlight;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    &__item-description {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    &__item-link {
+        color: $color-secondary;
+        text-decoration: none;
+        font-weight: bold;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    // Estilos para dispositivos móviles
+    @media screen and (max-width: 768px) {
+        padding: 3rem 1rem;
+
+        &__item {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+@import '../../assets/styles/base/variables';
+
+.about {
+    display: flex;
+    padding: 4rem 2rem;
+    background-color: $color-secondary;
+    min-height: 90vh;
+
+    &__container {
+        display: flex;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    &__content-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap; // Permite que los elementos se reorganicen en pantallas pequeñas
+    }
+
+    &__image-container {
+        flex: 0 0 auto;
+        margin-right: 2rem; // Espacio entre la imagen y el texto
+        margin-bottom: 1rem; // Espacio debajo de la imagen en pantallas pequeñas
+        margin-top: 1rem;
+    }
+
+    &__image {
+        width: 300px; // Tamaño de la imagen
+        height: 300px;
+        border-radius: 50%; // Hace que la imagen sea circular
+        object-fit: cover; // Evita que la imagen se deforme
+    }
+
+    &__text-container {
+        flex: 1;
+        text-align: left; // Alinea el texto a la izquierda
+    }
+
+    &__title {
+        color: $color-primary;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &__content {
+        color: $color-primary;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    // Estilos para dispositivos móviles
+    @media screen and (max-width: 768px) {
+        padding: 3rem 1rem;
+
+        &__content-wrapper {
+            flex-direction: column; // Cambia la dirección de los elementos a columna en pantallas pequeñas
+            align-items: center;
+        }
+
+        &__image-container {
+            margin-right: 0;
+            margin-bottom: 1rem; // Espacio debajo de la imagen
+        }
+
+        &__text-container {
+            text-align: center; // Centra el texto en pantallas pequeñas
+        }
+    }
+}

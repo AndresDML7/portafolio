@@ -1,0 +1,17 @@
+@import '../../assets/styles/base/variables';
+
+.footer {
+    background-color: $color-primary;
+    color: $color-text;
+    padding: 1rem 2rem;
+    text-align: center;
+
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &__text {
+        font-size: 0.9rem;
+    }
+}
