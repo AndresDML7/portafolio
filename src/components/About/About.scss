@@ -2,12 +2,14 @@
 
 .about {
     display: flex;
+    flex-direction: column;
     padding: 4rem 2rem;
-    background-color: $color-secondary;
+    background-color: $color-background;
     min-height: 90vh;
 
     &__container {
         display: flex;
+        flex-direction: column;
         max-width: 800px;
         margin: 0 auto;
         text-align: center;
@@ -19,6 +21,7 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap; // Permite que los elementos se reorganicen en pantallas pequeñas
+        gap: 1rem;
     }
 
     &__image-container {
@@ -29,10 +32,15 @@
     }
 
     &__image {
-        width: 300px; // Tamaño de la imagen
-        height: 300px;
+        width: 350px; // Tamaño de la imagen
+        height: 350px;
         border-radius: 50%; // Hace que la imagen sea circular
         object-fit: cover; // Evita que la imagen se deforme
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 20px 20px, 
+            rgba(0, 0, 0, 0.3) 0px -20px 20px, 
+            rgba(0, 0, 0, 0.3) 0px 20px 20px, 
+            rgba(0, 0, 0, 0.3) 0px 20px 20px, 
+            rgba(0, 0, 0, 0.3) 0px -3px 5px
     }
 
     &__text-container {
@@ -41,15 +49,64 @@
     }
 
     &__title {
-        color: $color-primary;
+        color: $color-secondary;
         font-size: 2rem;
         margin-bottom: 1rem;
     }
 
     &__content {
-        color: $color-primary;
-        font-size: 1rem;
+        color: $color-text;
+        font-size: 1.2rem;
         line-height: 1.6;
+    }
+
+    &__skills {
+        margin-top: 2rem;
+    }
+
+    &__skills-title {
+        color: $color-secondary;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &__skills-list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    &__skills-item {
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        background-color: $color-primary;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 180px;
+        justify-content: flex-start;
+    }
+
+    &__skills-link {
+        color: $color-secondary;
+        margin-right: 0.5rem;
+        font-size: 1.25rem;
+        text-decoration: none;
+    }
+
+    &__skills-icon {
+        font-size: 1.5rem;
+        color: $color-background-2;
+    }
+
+    &__skills-label {
+        color: $color-text;
+        margin-left: 0.5rem;
+        font-weight: bold;
     }
 
     // Estilos para dispositivos móviles
@@ -68,6 +125,17 @@
 
         &__text-container {
             text-align: center; // Centra el texto en pantallas pequeñas
+        }
+
+        &__skills-list {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__skills-item {
+            width: 100%;
+            max-width: 300px;
+            justify-content: center;
         }
     }
 }

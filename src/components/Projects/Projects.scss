@@ -2,7 +2,9 @@
 
 .projects {
     padding: 4rem 2rem;
-    background-color: $color-highlight;
+    
+    background-color: $color-primary;
+    background-size: cover;
     min-height: 90vh;
 
     &__container {
@@ -12,7 +14,7 @@
     }
 
     &__title {
-        color: $color-primary;
+        color: $color-secondary;
         font-size: 2rem;
         margin-bottom: 2rem;
     }
@@ -25,17 +27,17 @@
     }
 
     &__item {
-        background-color: $color-primary;
+        background-color: $color-background;
         color: $color-text;
         padding: 1.5rem;
         border-radius: 10px;
         width: calc(33.333% - 2rem);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 10px;
         text-align: left;
     }
 
     &__item-title {
-        color: $color-highlight;
+        color: $color-background-2;
         font-size: 1.5rem;
         margin-bottom: 1rem;
     }
@@ -46,7 +48,7 @@
     }
 
     &__item-link {
-        color: $color-secondary;
+        color: $color-highlight;
         text-decoration: none;
         font-weight: bold;
         &:hover {

@@ -1,7 +1,6 @@
 @import "../../assets/styles/base/variables";
 
 .header {
-  background-color: $color-primary;
   color: $color-text;
   position: fixed;
   width: 100%;
@@ -70,6 +69,7 @@
   // Estilos para dispositivos móviles
   @media screen and (max-width: 800px) {
     height: 200px;
+    background-color: $color-primary;
     &__container {
       flex-direction: column;
       align-items: flex-start;
